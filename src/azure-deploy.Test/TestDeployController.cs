@@ -8,8 +8,11 @@ public class TestDeployController
     /// This function is to test the api controller requests
     /// </summary>
     [Fact]
-    public void TestGetStatusCodeSuccess()
+    public async void TestGetStatusCodeSuccess()
     {
-        throw new NotImplementedException();
+        var application = new WebApplication();
+        var response = await application.ApiGetRequest("/Deploy");
+        var result = await response.Content.ReadAsStringAsync();
+        result. Should().Be("Estou realizando o deploy da minha API utilizando Azure");
     }
 }

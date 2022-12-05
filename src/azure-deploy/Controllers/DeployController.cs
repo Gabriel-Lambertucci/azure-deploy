@@ -13,6 +13,6 @@ public class DeployController : ControllerBase
     [HttpGet]
     public string Get()
     {
-        throw new NotImplementedException();
+        return "Estou realizando o deploy da minha API utilizando Azure";
     }
 }
